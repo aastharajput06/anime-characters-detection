@@ -29,8 +29,10 @@ def extract_frames(video_path, output_dir, fps=1):
     print(f"Frames extracted to {output_dir}")
 
 if __name__ == "__main__":
-    # Use the absolute path to your video file
-    video_file = r"C:\Users\Aastha Rajput\Desktop\anime-character-detection-aastharajput\data\Naruto_ep1.mp4"  
-    output_folder = r"C:\Users\Aastha Rajput\Desktop\anime-character-detection-aastharajput\data\frames"       
+   
+    # Relative path assuming video file is in `data/video/anime_episode.mp4`
+    video_file = os.path.join("data", "video", "anime_episode.mp4")
+    output_folder = os.path.join("data", "frames")
 
+   
     extract_frames(video_file, output_folder, fps=1)
